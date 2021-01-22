@@ -10,9 +10,9 @@ hamburger.addEventListener('click', () => {
 
 
 
-menu_item.forEach((item) => {
-    item.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        mobile_menu.classList.toggle('active');
-    });
-});
+// menu_item.forEach((item) => {
+//     item.addEventListener('click', () => {
+//         hamburger.classList.toggle('active');
+//         mobile_menu.classList.toggle('active');
+//     });
+// });
