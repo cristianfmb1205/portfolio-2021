@@ -1,0 +1,65 @@
+.service {
+    min-height: 20rem;
+    .text-service {
+        max-width: 50rem;
+        margin: 2rem auto;
+        padding: 2rem;
+        .service-title {
+            text-align: center;
+            font-size: 4rem;
+            margin: 0;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 1.6;
+        }
+        p {
+            text-align: center;
+            color: #333232;
+            font-size: 1.6rem;
+        }
+        @include desktop {
+            .service-title {
+                font-size: 7rem;
+            }
+            p {
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+            }
+        }
+    }
+    .section-cards {
+        text-align: center;
+        .card {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.637), rgba(2, 2, 2, 0.493)), url('../images/img-1.png');
+            padding: 3rem;
+            margin: 2rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 15px;
+            min-height: 30rem;
+            h4 {
+                font-weight: 400;
+                font-size: 1.9rem;
+                letter-spacing: 1.6px;
+                color: $white;
+            }
+            .fab {
+                font-size: 6rem;
+                color: $yellow
+            }
+            p {
+                font-size: 1.5rem;
+                line-height: 2.3rem;
+                margin: 0;
+                color: $white;
+            }
+        }
+    }
+    @include tablet {
+        .section-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 2rem;
+        }
+    }
+}
