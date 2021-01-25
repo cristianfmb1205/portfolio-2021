@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
     font-size: 65.2%;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -35,4 +36,5 @@ ul {
 
 img {
     max-width: 100%;
+    object-fit: cover;
 }

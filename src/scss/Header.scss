@@ -5,6 +5,12 @@
     align-items: center;
     padding: 0 1rem;
     background-color: $blackLight;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    min-width: 320px;
     .hamburger {
         height: 60px;
         width: 60px;
