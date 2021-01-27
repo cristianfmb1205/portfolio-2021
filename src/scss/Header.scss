@@ -3,14 +3,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
-    background-color: $blackLight;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
-    width: 100vw;
+    z-index: 500;
     min-width: 320px;
+    width: 100vw;
+    background-color: $headerbg;
     .hamburger {
         height: 60px;
         width: 60px;
@@ -23,8 +22,8 @@
         justify-content: center;
         z-index: 100;
         cursor: pointer;
-        transform: scale(.8);
-        margin-right: 20px;
+        transform: scale(.6);
+        margin-right: 5vw;
         &::after {
             position: absolute;
             content: '';
@@ -51,26 +50,37 @@
                 left: 0;
                 top: 8px;
                 width: 100%;
+                transition: top .3s ease-in;
             }
             &::before {
                 position: absolute;
                 left: 0;
-                top: -8px;
+                bottom: 8px;
                 width: 100%;
+                transition: bottom .3s ease-in;
             }
+        }
+        &.active .bar::after {
+            top: 0;
+        }
+        &.active .bar::before {
+            bottom: 0;
         }
     }
     .name {
-        margin: 0 2rem;
+        margin-left: 3vw;
         text-transform: uppercase;
-        color: $white;
         font-size: 1.6rem;
         font-weight: 300;
         .letter-c {
             color: $lightRed;
+            font-weight: 500;
+            font-size: 2.7rem;
         }
         .letter-m {
             color: $lightRed;
+            font-weight: 500;
+            font-size: 2.5rem;
         }
     }
     @include tablet {
@@ -91,11 +101,12 @@
         flex-direction: column;
         width: 100vw;
         height: 100vh;
-        background-color: rgb(15, 15, 14);
         top: 0;
         left: 0;
         z-index: 1;
         transform: scale(0);
+        padding-right: 1rem;
+        background-color: $headerbg;
         .items {
             margin-top: 4rem;
             a {
@@ -165,6 +176,6 @@
     }
     100% {
         opacity: 0;
-        transform: scale(1.6);
+        transform: scale(1.4);
     }
 }

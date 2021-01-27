@@ -3,23 +3,25 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    background-color: #4158D0;
+    background-color: $lightblue;
     background-image: linear-gradient(rgba(28, 51, 87, 0.753), rgba(61, 27, 58, 0.39)), url('../images/bgHero.jpg');
     position: relative;
-    width: 100%;
     min-width: 320px;
     background-position: top center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
     .content-hero {
-        position: absolute;
-        top: 20%;
-        left: 10%;
-        height: 35rem;
+        height: 20rem;
+        padding-left: 5%;
+        flex-basis: 50%;
         .text-hero {
             color: $white;
             font-size: 4rem;
             padding: 0;
             margin: 0;
             font-weight: 500;
+            display: block;
         }
         @include desktop {
             .text-hero {

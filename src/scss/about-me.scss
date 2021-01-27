@@ -1,13 +1,13 @@
 .about-me {
     .border {
         .about-image {
-            width: 30rem;
+            width: 90%;
             background: rgb(5, 5, 5);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             margin: 0 auto;
-            border-radius: 10px;
+            border-radius: 20px;
         }
     }
     .about-title {
@@ -22,7 +22,7 @@
     }
     .about-text {
         color: #333232;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         margin: 0 auto;
     }
 }
@@ -32,15 +32,15 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin: 4rem 0;
-        column-gap: 3rem;
+        justify-content: center;
         .border {
-            border: 1rem solid $lightRed;
+            margin: 0 auto;
+            border: .5rem solid $lightRed;
             border-radius: 10px;
             width: 30rem;
-            margin-left: 2rem;
             position: relative;
-            margin-top: 4rem;
             height: 32.5rem;
+            top: 4rem;
             .about-image {
                 width: 30rem;
                 background: rgb(5, 5, 5);
@@ -50,9 +50,12 @@
                 margin: 0 auto;
                 border-radius: 10px;
                 position: absolute;
-                top: -5.5rem;
-                left: 1rem;
+                top: -3rem;
+                left: .8rem;
                 height: 35rem;
+                img {
+                    display: block;
+                }
             }
         }
     }
@@ -60,8 +63,6 @@
 
 @include desktop {
     .about-me {
-        .border {
-            margin-left: 8rem;
-        }
+        grid-template-columns: minmax(max-content, 600px) minmax(20rem, 60rem);
     }
 }
